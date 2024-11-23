@@ -1,0 +1,631 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    color: #000;
+}
+
+/* Header Section */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    /* position: sticky; */
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.logo img {
+    height: 40px;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+}
+
+.navbar a, .navbar button, .navbar Link {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.navbar a:hover, .navbar button:hover, .navbar Link:hover {
+    color: #ffcc00;
+}
+
+.user-greeting {
+    margin-right: 15px;
+    font-weight: 500;
+    color: #ffcc00;
+}
+
+.icons a {
+    color: #fff;
+    margin-left: 10px;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.icons a:hover {
+    color: #ffcc00;
+}
+
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.logo img {
+    height: 40px;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+}
+
+.navbar a, .navbar button, .navbar Link {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.navbar a:hover, .navbar button:hover, .navbar Link:hover {
+    color: #ffcc00;
+}
+
+.user-greeting {
+    margin-right: 15px;
+    font-weight: 500;
+    color: #ffcc00;
+}
+
+.icons a {
+    color: #fff;
+    margin-left: 10px;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.icons a:hover {
+    color: #ffcc00;
+}
+
+/* Home Section */
+.home-section {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 10%;
+    height: 100vh;
+    color: #fff;
+    background: url('../images/home-bg-removebg-preview.png') no-repeat center center;
+    background-size: cover;
+    background-color: #000;
+    text-align: left;
+}
+
+.home-section h1 {
+    font-size: 4em;
+    margin-left: -100px;
+}
+
+.home-section  p {
+    margin-right: -100px;
+    font-size: 1.2em;
+    max-width: 400px;
+    line-height: 1.6;
+    text-align: right;
+}
+.about-section {
+    display: flex;
+    align-items: center;
+    padding: 60px 20px;
+    background-color: #f0f0f0;
+}
+
+.about-section .image-container {
+    flex: 1;
+    max-width: 50%;
+    height: 500px; /* Adjust based on your desired container height */
+    background-image: url('../images/about-removebg-preview.png'); /* Replace with your image path */
+    background-size: contain; /* Ensures the entire image is visible */
+    background-repeat: no-repeat; /* Prevents image tiling */
+    background-position: center; /* Centers the image */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.about-section .text-container {
+    background-color: #0c0b0b;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    height: 500px;
+    flex: 1;
+    max-width: 50%;
+    padding-left: 20px;
+    text-align: left;
+}
+
+.about-section .text-container h2 {
+    font-size: 2em;
+    color: #333;
+    margin-top: 0;
+}
+
+.about-section .text-container p {
+    line-height: 1.6;
+    font-size: 1.1em;
+    color: #666;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0); /* Initial and end position */
+    }
+    50% {
+        transform: translateY(-10px); /* Floating height */
+    }
+}
+
+.menu-grid{
+    margin-left: -35px;
+    display: grid;
+    grid-template-columns: repeat(4, 45vh);
+    gap: 2rem;
+}
+.menu-section {
+    width: 100%; /* Full width */
+    height: 100vh; /* Full height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    background-color: #f5f5f5; /* Optional: background color */
+    overflow: hidden;
+    flex-direction: column; /* Align items vertically */
+    text-align: center; /* Center the text */
+}
+
+/* Main container to hold the cards */
+.menu-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centers the cards horizontally */
+    gap: 20px; /* Space between cards */
+    max-width: 1200px; /* Max width to avoid stretching too wide */
+    width: 100%;
+}
+
+/* Card styling */
+.menu-card {
+    background-color: #331b0f;
+    margin: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 1rem;
+    transition: transform 0.3s ease-in-out;
+    animation: float 3s ease-in-out infinite;
+    width: 250px; /* Set fixed width for the cards */
+    height: auto;
+    will-change: transform;
+}
+
+/* Staggering Effect for Multiple Cards */
+.menu-card:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.menu-card:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+.menu-card:nth-child(4) {
+    animation-delay: 0.6s;
+}
+
+.menu-card:nth-child(5) {
+    animation-delay: 0.8s;
+}
+
+.menu-card:nth-child(6) {
+    animation-delay: 1s;
+}
+
+.menu-card:nth-child(7) {
+    animation-delay: 1.2s;
+}
+
+.menu-card:nth-child(8) {
+    animation-delay: 1.4s;
+}
+
+.menu-card:hover {
+    transform: translateY(-5px); /* Slight lift effect on hover */
+}
+
+/* Circle Image inside each card */
+.image-circle {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 1rem;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid #ddd;
+    transition: transform 0.3s ease-in-out;
+}
+
+.menu-card:hover .image-circle {
+    transform: scale(1.1); /* Scales up the image inside the circle */
+}
+
+.menu-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.menu-card h3 {
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+    color: #fff;
+}
+
+.menu-card p {
+    font-size: 1rem;
+    color: #fff;
+}
+
+/* Ensure heading and paragraph are centered */
+.menu-section h2 {
+    font-size: 2.5rem;
+    color: #331b0f; /* Dark color for heading */
+    margin-bottom: 10px;
+    text-align: center; /* Center the heading */
+}
+
+.menu-section p {
+    font-size: 1.2rem;
+    color: rgb(92, 62, 48);
+    margin-bottom: 30px;
+    text-align: center; /* Center the paragraph */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .menu-container {
+        justify-content: space-around;
+        gap: 10px; /* Adjust gap for smaller screens */
+    }
+
+    .menu-card {
+        width: 200px; /* Adjust card width for mobile */
+        margin: 10px auto; /* Center cards on mobile */
+    }
+
+    .menu-section h2 {
+        font-size: 2rem; /* Adjust heading size for smaller screens */
+    }
+
+    .menu-section p {
+        font-size: 1rem;  /* Adjust paragraph size for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .menu-card {
+        width: 180px; /* Adjust card width even further for very small screens */
+    }
+}
+
+/* Other Sections */
+.about-section, .menu-section, .review-section, .contact-section {
+    padding: 60px 20px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.aboutSection {
+    background-color: #f0f0f0;
+}
+
+.menu-section,
+.review-section,
+.contact-section {
+    background-color: #fff;
+}
+
+section h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+section p {
+    font-size: 1.1em;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Toast Container */
+.Toastify__toast-container {
+    font-family: 'Arial', sans-serif;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .home-section {
+        padding: 0 5%;
+    }
+
+    .home-section h1 {
+        font-size: 2.5em;
+        text-align: center;
+    }
+
+    .home-section p {
+        text-align: center;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar a, .navbar button {
+        margin: 5px 0;
+    }
+
+    .icons {
+        display: none;
+    }
+}
+
+
+
+.review-section {
+    background-color: rgba(51, 27, 15, 0.8); /* Coffee color with slight transparency */
+    color: white; /* White text for readability */
+    padding: 80px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; /* Ensures review section is above circles */
+    z-index: 2; /* Keep review content above circles */
+    text-align: center; /* Center text content */
+    min-height: 82vh; /* Ensures review section fills the page */
+  }
+  
+  /* Review Container Styling */
+  .review-container {
+    max-width: 1200px;
+    width: 100%;
+    z-index: 3; /* Keeps it above the circles */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Review Content Styling */
+  .review-content h2 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #ffcc00; /* Golden underline */
+    display: inline-block;
+    padding-bottom: 10px;
+  }
+  
+  .review-content p {
+    font-size: 1.5em;
+    line-height: 1.6;
+    max-width: 800px; /* Keeps text from becoming too wide */
+  }
+  
+  /* Circles for the background */
+  .circle {
+    position: absolute;
+    border-radius: 50%; /* Make circles round */
+    background-color: rgba(51, 27, 15, 0.3); /* Coffee-colored with slight transparency */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+    pointer-events: none; /* Circles won't block clicks */
+  }
+  
+  /* Circle Sizes */
+  .circle.small {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .circle.medium {
+    width: 150px;
+    height: 150px;
+  }
+  
+  .circle.large {
+    width: 250px;
+    height: 250px;
+  }
+  
+  /* Animation for the circles (floating effect) */
+ 
+  
+  /* Apply animation to the circles */
+  .circle {
+    animation: floatAnimation 8s ease-in-out infinite;
+  }
+
+
+  .giftcard-section {
+      position: relative;
+      width: 100%;
+      height: 100vh; /* Full page height */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+  }
+  
+  .giftcard-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background:rgb(92, 62, 48); /* Coffee brown color */
+      clip-path: polygon(0 0, 25% 20%, 50% 0, 75% 20%, 100% 0, 100% 100%, 75% 80%, 50% 100%, 25% 80%, 0 100%);
+      z-index: 0;
+  }
+  
+  .giftcard-content {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      padding: 2rem;
+      color:rgb(92, 62, 48); /* Coffee brown text */
+      max-width: 600px;
+      background-color: rgba(255, 255, 255, 0.8); /* Slight white background for readability */
+      border-radius: 10px;
+  }
+  
+  .giftcard-content h2 {
+      font-size: 3rem; /* Increase font size for better visibility */
+      margin-bottom: 1rem;
+      color:rgb(92, 62, 48); /* Coffee brown */
+  }
+  
+  .giftcard-content p {
+      font-size: 1.5rem; /* Increase font size for readability */
+      margin-bottom: 2rem;
+      line-height: 1.5;
+  }
+  
+  .giftcard-content .btn {
+      display: inline-block;
+      padding: 1rem 2rem; /* Increase button padding for better look */
+      background-color:rgb(92, 62, 48);/* White button */
+      color: #fff; /* Coffee brown text */
+      font-size: 1.2rem; /* Slightly larger button text */
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: transform 0.3s ease background-color 0.3s ease;
+  }
+  
+  .giftcard-content .btn:hover {
+      transform: scale(1.1);
+      background-color:rgb(92, 62, 48); /* Darker coffee brown on hover */
+      color: #fff; /* White text */
+  }
+
+
+
+.contact-section {
+    background-color: #d29c70; /* Light coffee cream background */
+    color: #4b3621; /* Deep brown coffee text */
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    max-width: 700px;
+    margin: 40px auto;
+    text-align: center;
+    font-family: "Merriweather", serif; /* A warm, elegant font */
+  }
+  
+  .contact-section h2 {
+    font-size: 2.5rem;
+    color: #7b4b26; /* Rich mocha brown */
+    margin-bottom: 20px;
+    text-transform: uppercase;
+  }
+  
+  .contact-intro {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+  }
+  
+  .contact-details p {
+    font-size: 1.1rem;
+    margin: 10px 0;
+    font-weight: bold;
+  }
+  
+  .contact-details p strong {
+    color: #7b4b26; /* Accent color */
+  }
+  
+  .contact-section p {
+    line-height: 1.6;
+  }
+  
+  .contact-section:hover {
+    background-color: #efe2d0; /* Slightly lighter on hover */
+    transform: translateY(-5px);
+    transition: all 0.3s ease-in-out;
+  }
+
+/* section h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+section p {
+    font-size: 1.1em;
+    max-width: 800px;
+    margin: 0 auto;
+} */
+
+/* Toast Container */
+.Toastify__toast-container {
+    font-family: 'Arial', sans-serif;
+}
+
+
+@media (max-width: 768px) {
+    .home-sectionection {
+        padding: 0 5%;
+    }
+
+    .home-sectionection h1 {
+        font-size: 2.5em;
+        text-align: center;
+    }
+
+    .home-sectionection p {
+        text-align: center;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar a, .navbar button {
+        margin: 5px 0;
+    }
+
+    .icons {
+        display: none;
+    }
+}
